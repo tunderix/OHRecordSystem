@@ -1,0 +1,20 @@
+{
+  "name": "OHRecordSystem",
+  "version": "1.0.0",
+  "description": "Idea is to pass game results and game records in to API and store the stuff into mongoDB running on Heroku",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tunderix/OHRecordSystem.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tunderix/OHRecordSystem/issues"
+  },
+  "homepage": "https://github.com/tunderix/OHRecordSystem#readme"
+}
