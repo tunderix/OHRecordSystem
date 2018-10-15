@@ -52,21 +52,21 @@ router.route('/GameRecords')
     })
 
     .get(function(req, res) {
-        GameRecord.find(function(err, bears) {
+        GameRecord.find(function(err, records) {
             if (err)
                 res.send(err);
 
-            res.json(bears);
+            res.json(records);
         });
     });
 
 router.route('/GameRecords/:record_id')
 
     .get(function(req, res) {
-        Bear.findById(req.params.record_id, function(err, bear) {
+        GameRecord.findById(req.params.record_id, function(err, game_record) {
             if (err)
                 res.send(err);
-            res.json(bear);
+            res.json(game_record);
         });
     });
 
