@@ -35,9 +35,7 @@ router.route('/GameRecords')
         });
     });
 
-    /*
 router.route('/GameRecords/:record_id')
-
     .get(function(req, res) {
         GameRecord.findById(req.params.record_id, function(err, game_record) {
             if (err)
@@ -45,7 +43,7 @@ router.route('/GameRecords/:record_id')
             res.json(game_record);
         });
     });
-*/
+
 
 
 // Export API routes
