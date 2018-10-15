@@ -60,6 +60,7 @@ router.route('/GameRecords')
         });
     });
 
+    /*
 router.route('/GameRecords/:record_id')
 
     .get(function(req, res) {
@@ -69,7 +70,7 @@ router.route('/GameRecords/:record_id')
             res.json(game_record);
         });
     });
-
+*/
 app.use('/api', router);
 
 app.listen(port);
