@@ -18,8 +18,6 @@ mongoose.connect('mongodb://oh_web:Ketjukuul4@ds052978.mlab.com:52978/oh_record_
     }
 ); // connect to our database
 
-app.use(cors());
-app.use(compression());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
