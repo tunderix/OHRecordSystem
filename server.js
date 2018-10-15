@@ -5,7 +5,6 @@ var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var mongoose   = require('mongoose');
-var GameRecord     = require('./App/Models/game_record');
 let apiRoutes = require("./api-routes")
 
 mongoose.connect('mongodb://oh_web:Ketjukuul4@ds052978.mlab.com:52978/oh_record_service', 
