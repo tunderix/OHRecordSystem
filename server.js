@@ -10,14 +10,9 @@ mongoose.connect('mongodb://oh_web:Ketjukuul4@ds052978.mlab.com:52978/oh_record_
     { 
         useNewUrlParser: true 
     },
-    function(err,db){
-        if(err){
-            console.log(err);
-        }
-        else {
-            console.log('connected to '+ url);
-            db.close();
-        }
+    err => {
+        if (err) throw err;
+        console.log(`Successfully connected to database.`);
     }
 ); // connect to our database
 
