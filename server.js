@@ -6,7 +6,7 @@ var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var mongoose   = require('mongoose');
 var GameRecord     = require('./App/Models/game_record');
-mongoose.connect('mongodb://oh_web:Ketjukuul4@ds052978.mlab.com:52978/oh_record_service'); // connect to our database
+mongoose.connect('mongodb://oh_web:Ketjukuul4@ds052978.mlab.com:52978/oh_record_service', { useNewUrlParser: true }); // connect to our database
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
