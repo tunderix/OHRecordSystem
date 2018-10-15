@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/tunderix/OHRecordSystem/issues"
   },
-  "homepage": "https://github.com/tunderix/OHRecordSystem#readme"
+  "homepage": "https://github.com/tunderix/OHRecordSystem#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.3"
+  }
 }
