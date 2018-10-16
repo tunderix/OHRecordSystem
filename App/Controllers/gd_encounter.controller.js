@@ -1,4 +1,4 @@
-const GameData_Encounter = require('/App/Models/gd_encounter.js');
+const GameData_Encounter = require('../Models/gd_encounter');
 
 // Create and Save a new Game Record
 exports.create = (req, res) => {
