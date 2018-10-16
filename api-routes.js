@@ -14,6 +14,7 @@ module.exports = (app) => {
     const GameRecordController = require('./App/Controllers/game_record.controller.js');
     const APIController = require('./App/Controllers/api.controller.js');
     const GameDataController = require('./App/Controllers/game_data.controller.js');
+    const EncounterController = require('./App/Controllers/gd_encounter.controller.js');
 
     app.get('/', APIController.apiDescription)
     
@@ -27,4 +28,11 @@ module.exports = (app) => {
     // Game Data
     app.get('/gamedata', GameDataController.defaultGameData);
     app.get('/gamedata/collected', GameDataController.collectedGameData);
+    
+    // Encounters
+    app.post('/gamedata/encounters', EncounterController.create);
+    app.get('/gamedata/encounters', EncounterController.findAll);
+    app.get('/gamedata/encounters/:encounter_id', EncounterController.findOne);
+    app.put('/gamedata/encounters/:encounter_id', EncounterController.update);
+    app.delete('/gamedata/encounters/:encounter_id', EncounterController.delete);
 };

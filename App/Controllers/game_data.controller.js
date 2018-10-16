@@ -1,5 +1,6 @@
 const gData = require('../GameData/GameData.json');
 const encounterChoices = require('../GameData/EncounterChoices.json');
+const EncounterController = require('./gd_encounter.controller.js');
 
 
 exports.defaultGameData = (req, res) => {
@@ -8,7 +9,10 @@ exports.defaultGameData = (req, res) => {
 
 
 exports.collectedGameData = (req, res) => {
-    return res.send(encounterChoices);
+    var allData = [];
+    allData.concat(encounterChoices);
+    allData.concat(EncounterController.findAll);
+    return res.send(allData);
 };
 
 
