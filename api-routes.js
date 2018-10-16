@@ -3,6 +3,8 @@
 var GameRecord     = require('./App/Models/game_record');
 let router = require('express').Router();
 
+const notes = require('./App/Controllers/game_record.controller.js');
+
 // API Response
 router.get('/', function (req, res) {
     res.json({

@@ -6,9 +6,9 @@ var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var mongoose   = require('mongoose');
 let apiRoutes = require("./api-routes")
+const dbConfig = require('./config/database.config.js');
 
-mongoose.connect('mongodb://oh_web:Ketjukuul4@ds052978.mlab.com:52978/oh_record_service', 
-    { 
+mongoose.connect(dbConfig.url, { 
         useNewUrlParser: true 
     },
     err => {
