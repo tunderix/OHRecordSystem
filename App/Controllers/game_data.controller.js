@@ -12,21 +12,14 @@ exports.defaultGameData = (req, res) => {
   
 exports.collectedGameData = (req, res) => {
     var allData = [];
+    var data = [EncounterController.findAll, encounterChoices];
 
-    var promises = [EncounterController.findAll, encounterChoices].map(function(data) {
-        return new Promise(function(resolve, reject) {
-          var collection = conn.collection(data);
-          collection.drop(function(err) {
-            if (err) { return reject(err); }
-            allData.push(data);
-            console.log('dropped ' + data);
-            resolve();
-          });
-        });
-      });
-
-    Promise.all(promises)
-    .then(function() { return res.send(allData); })
+    Promise.all(data.map(partialData => fetch(partialData).then(pData => {
+        allData.push(pData);
+    })))
+    .then(result => {
+        res.send(allData);
+    })
     .catch(console.error);
 };
 
