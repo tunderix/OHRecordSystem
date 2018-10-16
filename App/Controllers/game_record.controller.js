@@ -1,5 +1,4 @@
-const GameRecord = require('./App/Models/game_record.js');
-
+const GameRecord = require('../Models/game_record.js');
 
 // Retrieve and return all records from the database.
 exports.apiDescription = (req, res) => {

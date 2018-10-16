@@ -1,6 +1,5 @@
 // Filename: api-routes.js
 // Initialize express router
-var GameRecord     = require('./App/Models/game_record');
 let router = require('express').Router();
 
 
