@@ -1,6 +1,6 @@
 const gData = require('../GameData/GameData.json');
 const encounterChoices = require('../GameData/EncounterChoices.json');
-//const EncounterController = require('./gd_encounter.controller.js');
+const EncounterController = require('./gd_encounter.controller.js');
 
 
 exports.defaultGameData = (req, res) => {
