@@ -9,6 +9,9 @@ var RecordSchema   = new Schema({
     biomesExplored: Number,
     daysPassed: Number, 
     charactersUnlocked: Number
-});
+    }, {
+    timestamps: true
+    }
+);
 
 module.exports = mongoose.model('GameRecord', RecordSchema);
