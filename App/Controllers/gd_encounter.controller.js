@@ -1,4 +1,4 @@
-const GameData_Encounter = require('../Models/gd_encounter.js');
+const GameDataEncounter = require('../Models/gd_encounter.js');
 
 // Create and Save a new Game Record
 exports.create = (req, res) => {
@@ -10,7 +10,7 @@ exports.create = (req, res) => {
     }
 
     // Create a Game Record
-    const encounter = new GameData_Encounter({
+    const encounter = new GameDataEncounter({
         title: req.body.title,
         description: req.body.description,
         encounterType: req.body.encounterType,
@@ -30,7 +30,7 @@ exports.create = (req, res) => {
 
 // Retrieve and return all records from the database.
 exports.findAll = (req, res) => {
-    GameData_Encounter.find()
+    GameDataEncounter.find()
     .then(encounters => {
         res.send(encounters);
     }).catch(err => {
@@ -42,7 +42,7 @@ exports.findAll = (req, res) => {
 
 // Find a single record with a record_id
 exports.findOne = (req, res) => {
-    GameData_Encounter.findById(req.params.encounter_id)
+    GameDataEncounter.findById(req.params.encounter_id)
     .then(encounter => {
         if(!encounter) {
             return res.status(404).send({
@@ -70,7 +70,7 @@ exports.update = (req, res) => {
         });
     }
 
-    GameData_Encounter.findByIdAndUpdate(req.params.encounter_id, {
+    GameDataEncounter.findByIdAndUpdate(req.params.encounter_id, {
         title: req.body.title,
         description: req.body.description,
         encounterType: req.body.encounterType,
@@ -96,7 +96,7 @@ exports.update = (req, res) => {
 };
 
 exports.delete = (req, res) => {
-    GameData_Encounter.findByIdAndRemove(req.params.encounter_id)
+    GameDataEncounter.findByIdAndRemove(req.params.encounter_id)
     .then(encounter => {
         if(!encounter) {
             return res.status(404).send({
