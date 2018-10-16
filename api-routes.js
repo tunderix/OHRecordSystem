@@ -16,6 +16,7 @@ module.exports = (app) => {
     const GameRecordController = require('./App/Controllers/game_record.controller.js');
 
     app.get('/', GameRecordController.apiDescription)
+    
     // Create a new Note
     app.post('/records', GameRecordController.create);
 

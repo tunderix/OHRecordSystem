@@ -2,7 +2,7 @@ const GameRecord = require('../Models/game_record.js');
 
 // Retrieve and return all records from the database.
 exports.apiDescription = (req, res) => {
-    res.json({
+    return res.send({
         status: 'Working as intended',
         message: 'Overworld Hero game record and content API',
     });
