@@ -3,7 +3,7 @@
 var mongoose     = require('mongoose');
 var Schema       = mongoose.Schema;
 
-var GD_EncounterSchema   = new Schema({
+var GDEncounterSchema   = new Schema({
     title: String,
     description: String,
     encounterType: Number,
@@ -13,7 +13,7 @@ var GD_EncounterSchema   = new Schema({
     }
 );
 
-module.exports = mongoose.model('GameData_Encounter', GD_EncounterSchema);
+module.exports = mongoose.model('GameDataEncounter', GDEncounterSchema);
 
 
 /*
