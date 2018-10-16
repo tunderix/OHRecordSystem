@@ -7,8 +7,10 @@ var GDEncounterSchema   = new Schema({
     title: String,
     description: String,
     encounterType: Number,
-    choices: [Number]
-    },{
+    choices: { 
+        type: 'array',
+        items: { type: 'Number' }
+    }},{
     timestamps: true
     }
 )
