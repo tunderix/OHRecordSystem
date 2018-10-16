@@ -11,10 +11,10 @@ router.get('/', function (req, res) {
 });
 
 module.exports = (App) => {
-    const GameRecordController = require('./Controllers/game_record.controller.js');
-    const APIController = require('./Controllers/api.controller.js');
-    const GameDataController = require('./Controllers/game_data.controller.js');
-    const EncounterController = require('./Controllers/gd_encounter.controller.js');
+    const GameRecordController = require('./App/Controllers/game_record.controller.js');
+    const APIController = require('./App/Controllers/api.controller.js');
+    const GameDataController = require('./App/Controllers/game_data.controller.js');
+    const EncounterController = require('./App/Controllers/gd_encounter.controller.js');
 
     App.get('/', APIController.apiDescription)
     
