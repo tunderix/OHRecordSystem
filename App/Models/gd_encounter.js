@@ -11,19 +11,6 @@ var GDEncounterSchema   = new Schema({
     },{
     timestamps: true
     }
-);
+)
 
 module.exports = mongoose.model('GameDataEncounter', GDEncounterSchema);
-
-
-/*
-{
-    "title": "Fight: Orcs",
-    "description": "Campfight",
-    "encounterType": 5,
-    "choices": [
-        1,
-        3
-    ]
-}
-*/
