@@ -2,8 +2,6 @@
 // Initialize express router
 let router = require('express').Router();
 
-
-
 // API Response
 router.get('/', function (req, res) {
     res.json({
@@ -19,20 +17,14 @@ module.exports = (app) => {
 
     app.get('/', APIController.apiDescription)
     
-    // Create a new Note
+    // Game Records
     app.post('/records', GameRecordController.create);
-
-    // Retrieve all Notes
     app.get('/records', GameRecordController.findAll);
-
-    // Retrieve a single Note with noteId
     app.get('/records/:record_id', GameRecordController.findOne);
-
-    // Update a Note with noteId
     app.put('/records/:record_id', GameRecordController.update);
-
-    // Delete a Note with noteId
     app.delete('/records/:record_id', GameRecordController.delete);
 
-    app.get('/gamedata', GameDataController.gameData)
+    // Game Data
+    app.get('/gamedata', GameDataController.defaultGameData);
+    app.get('/gamedata/collected', GameDataController.collectedGameData);
 };
