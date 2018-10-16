@@ -15,7 +15,7 @@ exports.collectedGameData = (req, res) => {
     var data = [EncounterController.findAll, encounterChoices];
 
     Promise.all(data.map(partialData => {
-        allData.push(pData);
+        allData.push(partialData);
     }))
     .then(result => {
         res.send(allData);
