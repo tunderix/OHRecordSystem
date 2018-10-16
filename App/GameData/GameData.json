@@ -1,0 +1,283 @@
+{
+    "title": "Overworld Heroes Data",
+    "version": "0.1.2",
+    "encounters": [
+        {
+            "title": "Fight: Orcs",
+            "description": "Campfight",
+            "encounterType": 5,
+            "choices": [
+                1,
+                3
+            ]
+        },
+        {
+            "title": "Fight: Knights",
+            "description": "At castle",
+            "encounterType": 5,
+            "choices": [
+                1,
+                3
+            ]
+        },
+        {
+            "title": "Merchant",
+            "description": "Offers you tools for money",
+            "encounterType": 1,
+            "choices": [
+                1,
+                3
+            ]
+        },
+        {
+            "title": "Local Shop",
+            "description": "Shop people treat you nice and offer you their *Things*!",
+            "encounterType": 2,
+            "choices": [
+                1,
+                3
+            ]
+        },
+        {
+            "title": "MainQuest: Find a pillar",
+            "description": "Old man in hood tells you about a new pillar just a little bit west from here",
+            "encounterType": 4,
+            "choices": [
+                1,
+                3
+            ]
+        }
+    ],
+    "monsters": [
+        {
+            "name": "Orcs",
+            "imageName": "",
+            "baseCombatStrength": 10,
+            "health": 100
+        },
+        {
+            "name": "Trolls",
+            "imageName": "",
+            "baseCombatStrength": 50,
+            "health": 100
+        },
+        {
+            "name": "Dwarves",
+            "imageName": "",
+            "baseCombatStrength": 10,
+            "health": 100
+        },
+        {
+            "name": "Undead",
+            "imageName": "",
+            "baseCombatStrength": 40,
+            "health": 100
+        },
+        {
+            "name": "Pirates",
+            "imageName": "",
+            "baseCombatStrength": 100,
+            "health": 100
+        },
+        {
+            "name": "Demons",
+            "imageName": "",
+            "baseCombatStrength": 80,
+            "health": 100
+        },
+        {
+            "name": "Giants",
+            "imageName": "",
+            "baseCombatStrength": 50,
+            "health": 100
+        }
+    ],
+    "heroes": [
+        {
+            "name": "Mauri",
+            "logoImageName": "",
+            "combatStrength": 10,
+            "healthModifier": 10
+        },
+        {
+            "name": "Mursu",
+            "logoImageName": "",
+            "combatStrength": 10,
+            "healthModifier": 10
+        }
+    ],
+    "monsterModifiers": [
+        {
+            "id": 1,
+            "modifierValue": 0,
+            "label":"Tiny"
+        },
+        {
+            "id": 2,
+            "modifierValue": 0,
+            "label":"Tall"
+        },
+        {
+            "id": 3,
+            "modifierValue": 0,
+            "label":"Fat"
+        },
+        {
+            "id": 4,
+            "modifierValue": 0,
+            "label":"Loud"
+        },
+        {
+            "id": 5,
+            "modifierValue": 0,
+            "label":"Gigantic"
+        },
+        {
+            "id": 6,
+            "modifierValue": 0,
+            "label":"Fierce"
+        },
+        {
+            "id": 7,
+            "modifierValue": 0,
+            "label":"Furry"
+        },
+        {
+            "id": 8,
+            "modifierValue": 0,
+            "label":"Wizard"
+        },
+        {
+            "id": 9,
+            "modifierValue": 0,
+            "label":"Religious"
+        },
+        {
+            "id": 10,
+            "modifierValue": 0,
+            "label":"Poor"
+        },
+        {
+            "id": 11,
+            "modifierValue": 0,
+            "label":"Wealthy"
+        },
+        {
+            "id": 12,
+            "modifierValue": 0,
+            "label":"Intelligent"
+        },
+        {
+            "id": 13,
+            "modifierValue": 0,
+            "label":"Lousy"
+        },
+        {
+            "id": 14,
+            "modifierValue": 0,
+            "label":"Brutal"
+        },
+        {
+            "id": 15,
+            "modifierValue": 0,
+            "label":"Healthy"
+        },
+        {
+            "id": 16,
+            "modifierValue": 0,
+            "label":"Magical"
+        },
+        {
+            "id": 17,
+            "modifierValue": 0,
+            "label":"Flexible"
+        },
+        {
+            "id": 18,
+            "modifierValue": 0,
+            "label":"Self-sacrificing"
+        },
+        {
+            "id": 19,
+            "modifierValue": 0,
+            "label":"Patient"
+        },
+        {
+            "id": 20,
+            "modifierValue": 0,
+            "label":"Hard Working"
+        },
+        {
+            "id": 21,
+            "modifierValue": 0,
+            "label":"Fast"
+        },
+        {
+            "id": 22,
+            "modifierValue": 0,
+            "label":"Kind"
+        }
+    ],
+    "encounterChoices": [
+        {
+            "id": 1,
+            "label":"Yes"
+        },
+        {
+            "id": 2,
+            "label":"No"
+        },
+        {
+            "id": 3,
+            "label":"Fight"
+        },
+        {
+            "id": 4,
+            "label":"Trade"
+        }
+    ],
+    "tileTypes": [
+        {
+            "id": 1,
+            "label":"Plain",
+            "prefabName":"prefab_TilePlatform_Grasslands_001",
+            "visibilityDistance": 1,
+            "blocksLoS": false
+        },
+        {
+            "id": 2,
+            "label":"Mountain",
+            "prefabName":"prefab_TilePlatform_Grasslands_001",
+            "visibilityDistance": 2,
+            "blocksLoS": true
+        },
+        {
+            "id": 3,
+            "label":"Forest",
+            "prefabName":"prefab_TilePlatform_Grasslands_001",
+            "visibilityDistance": 1,
+            "blocksLoS": false
+        },
+        {
+            "id": 4,
+            "label":"Hills",
+            "prefabName":"prefab_TilePlatform_Grasslands_001",
+            "visibilityDistance": 2,
+            "blocksLoS": false
+        },
+        {
+            "id": 5,
+            "label":"Ruins",
+            "prefabName":"prefab_TilePlatform_Grasslands_001",
+            "visibilityDistance": 1,
+            "blocksLoS": false
+        },
+        {
+            "id": 6,
+            "label":"Village",
+            "prefabName":"prefab_TilePlatform_Grasslands_001",
+            "visibilityDistance": 1,
+            "blocksLoS": false
+        }
+    ]
+}

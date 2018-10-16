@@ -14,8 +14,10 @@ router.get('/', function (req, res) {
 
 module.exports = (app) => {
     const GameRecordController = require('./App/Controllers/game_record.controller.js');
+    const APIController = require('./App/Controllers/api.controller.js');
+    const GameDataController = require('./App/Controllers/game_data.controller.js');
 
-    app.get('/', GameRecordController.apiDescription)
+    app.get('/', APIController.apiDescription)
     
     // Create a new Note
     app.post('/records', GameRecordController.create);
@@ -31,4 +33,6 @@ module.exports = (app) => {
 
     // Delete a Note with noteId
     app.delete('/records/:record_id', GameRecordController.delete);
+
+    app.get('/gamedata', GameDataController.gameData)
 };
