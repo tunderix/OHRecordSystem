@@ -9,7 +9,7 @@ exports.defaultGameData = (req, res) => {
 
 exports.collectedGameData = (req, res) => {
     var allData = [];
-    allData.push(encounterChoices);
+    allData.push(encounterChoices[0]);
     allData.push(EncounterController.findAll);
     return res.send(allData);
 };
