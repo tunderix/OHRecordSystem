@@ -6,7 +6,7 @@ var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var mongoose   = require('mongoose');
 let apiRoutes = require("./api-routes")
-const dbConfig = require('./config/database.config.js');
+const dbConfig = require('.App/Config/database.config.js');
 
 mongoose.connect(dbConfig.url, { 
         useNewUrlParser: true 
